@@ -1,6 +1,12 @@
-import Link from 'next/link'
-import { Button } from "@/components/ui/button"
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 
 export function Header() {
   return (
@@ -24,5 +30,5 @@ export function Header() {
         </nav>
       </div>
     </header>
-  )
+  );
 }

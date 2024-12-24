@@ -1,12 +1,12 @@
-"use client"
-import TestNet from "@/components/test_net"
+"use client";
+import TestNet from "@/components/test_net";
 
 const page = () => {
   return (
     <div>
-        <TestNet />
+      <TestNet />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

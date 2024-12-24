@@ -1,21 +1,21 @@
-"use client"
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import { useAuth } from '@clerk/nextjs'
-import { Header } from '@/components/header'
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@clerk/nextjs";
+import { Header } from "@/components/header";
 
 export default function LandingPage() {
-  const router = useRouter()
-  const { isSignedIn } = useAuth()
+  const router = useRouter();
+  const { isSignedIn } = useAuth();
 
   useEffect(() => {
     const checkSignInStatus = async () => {
       if (isSignedIn) {
-        await router.push("/test-net")
+        router.push("/test-net");
       }
-    }
-    checkSignInStatus()
-  }, [isSignedIn, router])
+    };
+    checkSignInStatus();
+  }, [isSignedIn, router]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -38,5 +38,5 @@ export default function LandingPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
